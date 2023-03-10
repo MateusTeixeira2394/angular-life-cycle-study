@@ -3,12 +3,12 @@
   type="checkbox"
   name="comprado"
   id="comprado"
-  [(ngModel)]="item.comprado"
+  [(ngModel)]="item.bought"
   (change)="toggleChecked()"
   >
-<p class="description">{{item.nome}}</p>
-<div class="d-contents" *ngIf="!item.comprado" >
+<p class="description">{{item.name}}</p>
+<div class="d-contents" *ngIf="!item.bought" >
   <fa-icon (click)="deleteItem()" class="delete-icon" [icon]="faTrash" ></fa-icon>
   <fa-icon (click)="editItem()" class="edit-icon" [icon]="faPen" ></fa-icon>
 </div>
-<small class="date">{{item.data}}</small>
+<small class="date">{{item.date}}</small>

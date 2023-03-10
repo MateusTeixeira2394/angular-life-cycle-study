@@ -9,21 +9,21 @@ export class ShoppingListService {
   private shoppingList: Item[] = [
     {
       "id": 1,
-      "nome": "Queijo prato",
-      "data": "Segunda-feira (31/10/2022) às 08:30",
-      "comprado": false
+      "name": "Queijo prato",
+      "date": "Segunda-feira (31/10/2022) às 08:30",
+      "bought": false
     },
     {
       "id": 2,
-      "nome": "Leite integral",
-      "data": "Segunda-feira (31/10/2022) às 08:30",
-      "comprado": false
+      "name": "Leite integral",
+      "date": "Segunda-feira (31/10/2022) às 08:30",
+      "bought": false
     },
     {
       "id": 3,
-      "nome": "Mamão papaia",
-      "data": "Segunda-feira (31/10/2022) às 08:30",
-      "comprado": true
+      "name": "Mamão papaia",
+      "date": "Segunda-feira (31/10/2022) às 08:30",
+      "bought": true
     },
   ];
 
@@ -47,9 +47,9 @@ export class ShoppingListService {
 
     return {
       id: this.getNewId(),
-      nome: itemName,
-      data: new Date().toLocaleString('pt-BR'),
-      comprado: false
+      name: itemName,
+      date: new Date().toLocaleString('pt-BR'),
+      bought: false
     };
 
   };

@@ -13,9 +13,9 @@ export class ItemComponent implements OnInit {
   @Input()
   public item: Item = {
     id: 0,
-    comprado: false,
-    data: '00/10/2000',
-    nome: 'Nome do item'
+    bought: false,
+    date: '00/10/2000',
+    name: 'Item name'
   }
 
   @Output()

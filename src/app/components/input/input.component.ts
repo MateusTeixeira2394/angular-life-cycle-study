@@ -9,9 +9,9 @@ import { Item } from '../../interfaces/iItem';
 })
 export class InputComponent implements OnInit, OnChanges {
 
-  private readonly EDIt_ITEM: string = 'Editar item';
+  private readonly EDIt_ITEM: string = 'Edit item';
 
-  private readonly ADD_ITEM: string = 'Adicionar item';
+  private readonly ADD_ITEM: string = 'Add item';
 
   public itemName: string = '';
 
@@ -22,9 +22,9 @@ export class InputComponent implements OnInit, OnChanges {
   @Input()
   public editedItem: Item = {
     id: 0,
-    nome: '',
-    comprado: false,
-    data: ''
+    name: '',
+    bought: false,
+    date: ''
   }
 
   constructor(
@@ -35,7 +35,7 @@ export class InputComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (!changes['editedItem'].firstChange) {
-      this.itemName = this.editedItem?.nome;
+      this.itemName = this.editedItem?.name;
       this.buttonName = this.EDIt_ITEM;
       this.editMode = true;
     };
@@ -47,7 +47,7 @@ export class InputComponent implements OnInit, OnChanges {
   };
 
   public editItem(): void {
-    this.shoppingListService.editItem({ ...this.editedItem, nome: this.itemName });
+    this.shoppingListService.editItem({ ...this.editedItem, name: this.itemName });
     this.buttonName = this.ADD_ITEM;
     this.editMode = false;
     this.itemName = '';

@@ -1,0 +1,4 @@
+<form class="add-item" (ngSubmit)="editMode? editItem() : addItem()">
+  <input type="text" name="item" placeholder="Digite o item que deseja adicionar" [(ngModel)]="itemName">
+  <button type="submit">{{buttonName}}</button>
+</form>
